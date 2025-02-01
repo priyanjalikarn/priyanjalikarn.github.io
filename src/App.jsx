@@ -9,6 +9,7 @@ function App() {
   return (
     <>
       <Profile name="Priyanjali Karn" userImage={userImage} intro="Oh, hi! I'm a Writer, Communication Professional, and a Creative Educator." />
+
     </>
   )
 }

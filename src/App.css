@@ -20,15 +20,15 @@
   color: white;
   font-weight: 700;
   font-style: normal;
-  font-size: 3em;
+  /* font-size: 3em; */
 }
 
 .intro h2 {
   font-family: "Quattrocento", serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 3em;
-  text-align: center;
+  /* font-size: 3em; */
+  text-align: justify;
 }
 
 .carousel-container {
@@ -51,6 +51,12 @@
 }
 
 .title {
+  font-family: "Quattrocento", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.email {
   font-family: "Quattrocento", serif;
   font-weight: 700;
   font-style: normal;

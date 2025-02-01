@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { FaLinkedin, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const Profile = ({ name, userImage, intro }) => {
     const carouselItems = [
@@ -28,26 +29,34 @@ const Profile = ({ name, userImage, intro }) => {
     };
 
     return (
-        <div className="profile flex flex-col items-center text-center px-4">
-            <div className="headerName">
-                <h1>{name}</h1>
+        <div className="profile flex flex-col items-center text-center p-4">
+               <div className="flex flex-col md:flex-row items-center justify-center w-full relative">
+                <div className="headerName">
+                    <h1 className="text-3xl md:text-4xl lg:text-5xl text-center">{name}</h1>
+                </div>
+                {/* Social Media Icons */}
+                <div className="hidden md:flex space-x-4 text-white text-xl absolute right-0">
+                    <a href="#" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
+                </div>
             </div>
             <div className="intro">
-                <h2 className="text-white">{intro}</h2>
+                <h2 className="text-white text-xl md:text-3xl lg:text-5xl/18 ">{intro}</h2>
             </div>
             <div className="flex flex-col md:flex-row items-center justify-center mt-8 w-full">
                 {/* Enlarged User Image */}
                 <div className="userImage mb-6 md:mb-0 md:mr-6">
-                    <img src={userImage} alt="User" className="w-[300px] md:w-[400px] h-[400px] md:h-[500px] object-cover rounded-lg" />
+                    <img src={userImage} alt="User" className="w-[250px] md:w-[250px] lg:w-[400px] h-[300px] md:h-[400px] lg:h-[500px] object-cover rounded-lg" />
                 </div>
                 
                 {/* Enlarged Carousel */}
-                <div className="carousel-container w-full md:w-[600px] h-[400px] md:h-[500px]">
+                <div className="carousel-container w-full md:w-[450px] lg:w-[600px] h-[300px] md:h-[400px] lg:h-[500px]">
                     <Slider {...settings}>
                         {carouselItems.map((item, index) => (
                             <div key={index} className="relative flex flex-col items-center">
-                                <img src={item.img} alt={item.title} className="w-full h-[350px] md:h-[450px] object-cover rounded-lg" />
-                                <div className="mt-2 title  text-white px-6 py-2 rounded-lg shadow-md text-center">
+                                <img src={item.img} alt={item.title} className="w-full h-[250px] md:h-[350px] lg:h-[450px] object-cover rounded-lg" />
+                                <div className="mt-2 title text-white px-6 py-2 rounded-lg shadow-md text-center text-sm md:text-base lg:text-lg">
                                     {item.title}
                                 </div>
                             </div>
@@ -55,6 +64,16 @@ const Profile = ({ name, userImage, intro }) => {
                     </Slider>
                 </div>
             </div>
+                {/* Social Media Icons in Footer for Small Screens */}
+                <div className="md:hidden flex space-x-4 text-white text-xl mt-15">
+                <a href="#" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
+                <a href="#" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+                <a href="#" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
+                </div>
+                {/* Footer Section */}
+                <footer className="mt-10 text-white text-sm md:text-base text-center">
+                <p className="email"><a href="mailto:yourmail@example.com" className="underline">priyanjali.writer@gmail.com</a></p>
+                </footer>
             <style jsx>{`
                 .custom-dots li button:before {
                     color: white !important;

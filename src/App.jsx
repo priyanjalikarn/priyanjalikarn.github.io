@@ -1,5 +1,5 @@
 
-import userImage from './assets/images/pk.png'
+import userImage from './assets/images/photo.png'
 import './App.css'
 import Profile from './assets/components/profile'
 
